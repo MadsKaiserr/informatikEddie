@@ -1,0 +1,226 @@
+/* Her importerer vi skrifttypen "Inter" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+/* Dette gælder for alt */
+* {
+    margin : 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+/* Dette gælder links */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Boxen der er rundt om teksten Arngren og logoet */
+.nav__logo {
+    /* Display: flex gør, så indholdet kommer på linje med hinanden */
+    display: flex;
+    /* Align-items: center gør, så indholdet er centreret ud for hinaden */
+    align-items: center;
+    /* Antal pixels mellem teksten og logoet */
+    gap: 10px;
+    /* Gør så vi sætter det i venstre side, og hjælper, så navigationen sidder præcis i midten */
+    position: absolute;
+    /* Der er 7% af hele skærmens bredde inden logoet kommer */
+    left: 7%;
+}
+
+/* Arngren tekst */
+.header__h1 {
+    /* Skriftens størrelse */
+    font-size: 32px;
+    /* Hvor fed skriften skal være */
+    font-weight: 500;
+    /* Antal pixels mellem hvert bogstav */
+    letter-spacing: 3px;
+}
+
+.Logo {
+    /* Logoets højde */
+    height: 60px;
+}
+
+/* Hele toppen (navigationen) */
+.topnav {
+    /* Display: flex gør, så indholdet kommer på linje med hinanden */
+    display: flex;
+    /* Align-items: center gør, så indholdet er centreret ud for hinaden */
+    align-items: center;
+    /* Justify-content: center gør, så indholdet er centreret i midten af skærmen */
+    justify-content: center;
+    /* Padding gør, så der er 40 pixels op og ned, og 7% til hver af højre og venstre side uden indhold */
+    padding: 40px 7%; 
+    position: relative;
+}
+
+.header__nav {
+    /* Display: flex gør, så indholdet kommer på linje med hinanden */
+    display: flex;
+    /* Align-items: center gør, så indholdet er centreret ud for hinaden */
+    align-items: center;
+    /* Antal pixels mellem teksten og logoet */
+    gap: 50px;
+}
+
+/* Et link i navigationen */
+.header__nav__a {
+    color: #000;
+    /* Fjerner linjen der normalt er under et link */
+    text-decoration: none;
+    /* Skrifttypens størrelse */
+    font-size: 14px;
+    /* Kant i bunden som er usynlig (bruges til når vi holder musen over, og den skal vise en farvet kant */
+    border-bottom: 1px solid transparent;
+    /* Animation = fader ind på 0.2 sekunder */
+    transition: 0.2s;
+    /* Padding gør, så der er 10 pixels op og ned, og 5 pixels til hver af højre og venstre side uden indhold */
+    padding: 10px 5px;
+}
+
+ /* Når man holder musen over et link */
+.header__nav__a:hover {
+     /* Kant i bunden som bruges til når vi holder musen over, og den skal vise en farvet kant */
+    border-bottom: 1px solid #000;
+}
+
+ /* Ikoner i højre side */
+.header__nav__right {
+    /* Display: flex gør, så indholdet kommer på linje med hinanden */
+    display: flex;
+    /* Align-items: center gør, så indholdet er centreret ud for hinaden */
+    align-items: center;
+    /* Antal pixels mellem teksten og logoet */
+    gap: 15px;
+    position: absolute;
+    right: 7%;
+}
+
+/* Forside billede */
+.hero {
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    position: relative;
+    /* Så billedet ikke går ud over de 600 pixels i højden */
+    overflow: hidden;
+    display: flex;
+}
+
+/* Vi gør så bilen er bag ved teksten der er */
+.hero__bil {
+    width: 100%;
+    /* Gør så bilen er i midten */
+    margin-top: -250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hero__content {
+    padding-top: 150px;
+    padding-left: 7%;
+    z-index: 9;
+}
+
+.hero__h1 {
+    font-size: 64px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero__h2 {
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 10px;
+    color: #fff;
+}
+
+/* Knappen på forsiden */
+.hero__btn {
+    padding: 10px 15px;
+    border: 0px;
+    background-color: transparent;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+
+.produkter {
+    width: 100%;
+    padding: 100px 7%;
+}
+
+
+.produkter__top {
+    width: 100%;
+    display: flex;
+}
+
+.produkter__top__p {
+    font-size: 20px;
+    color: #c2c1be;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px 80px;
+    border-bottom: 2px solid #c2c1be;
+}
+
+.produkter__top__p__active {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    font-weight: 300;
+    padding: 10px 80px;
+    border-bottom: 2px solid #000;
+}
+
+.produkter__wrapper {
+    display: flex;
+    padding: 30px 0px;
+    overflow: hidden;
+    gap: 1%;
+    width: 86%;
+}
+
+.produkt {
+    width: 33%;
+    cursor: pointer;
+}
+
+.produkt__img {
+    width: 100%;
+    height: 500px;
+    background-color: #c2c1be;
+    opacity: 0.3;
+}
+
+.produkt__h1 {
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+.produkt__h2 {
+    font-size: 12px;
+    color: #c2c1be;
+    padding-top: 5px;
+}
+
+.produkt__h3 {
+    font-size: 16px;
+    color: #000;
+    padding-top: 10px;
+}
+
+.produkter__top__h1 {
+    font-size: 42px;
+    color: #000;
+    padding-bottom: 50px;
+}
